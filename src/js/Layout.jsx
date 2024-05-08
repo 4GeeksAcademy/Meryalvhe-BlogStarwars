@@ -1,14 +1,15 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./component/scrollToTop";
+import ScrollToTop from "./component/ScrollToTop.jsx";
 
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
-import injectContext from "./store/appContext";
+import { Home } from "./views/Home.jsx";
+import { Demo } from "./views/Demo.jsx";
+import { Single } from "./views/Single.jsx";
+import injectContext from "./store/appContext.js";
 
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
+import { Navbar } from "./component/Navbar.jsx";
+import { Footer } from "./component/Footer.jsx";
+import { Characters } from "./views/Characters.jsx";
 
 //create your first component
 const Layout = () => {
@@ -17,7 +18,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div className="d-flex flex-column min-vh-100">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -25,6 +26,7 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/characters" element = {<Characters/>}/>
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />
