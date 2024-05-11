@@ -17,13 +17,13 @@ export const Navbar = () => {
 				<Link className="nav-link font" aria-current="page" to="/characters">Characters</Link>
 				</li>
 				<li className="nav-item">
-				<Link className="nav-link font" to="#">Species</Link>
+				<Link className="nav-link font" to="/species">Species</Link>
 				</li>
 				<li className="nav-item">
-				<Link className="nav-link font" aria-current="page" to="#">Vehicles</Link>
+				<Link className="nav-link font" aria-current="page" to="/vehicles">Vehicles</Link>
 				</li>
 				<li className="nav-item">
-				<Link className="nav-link font" aria-current="page" to="#">Planets</Link>
+				<Link className="nav-link font" aria-current="page" to="/planets">Planets</Link>
 				</li>
 				
 			</ul>
