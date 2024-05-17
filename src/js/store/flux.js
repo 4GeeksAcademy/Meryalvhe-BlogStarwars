@@ -1,3 +1,5 @@
+import { sync } from "remote-origin-url";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -16,7 +18,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			characters:[{}],
 			species: [{}],
 			vehicles: [{}],
-			planets: [{}]
+			planets: [{}],
+			currentUser: null,
+
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -78,7 +82,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				const data = await response.json();
 				setStore({planets: data.results})
-			}
+			},
+			settingUser: (user) => {setStore({currentUser: user})},
+			settingCurrentUser: (text) => {setStore ({currentUserLink: text})},
+			
 		}
 	};
 };

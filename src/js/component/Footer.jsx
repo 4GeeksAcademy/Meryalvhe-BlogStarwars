@@ -14,13 +14,7 @@ export const Footer = () => {
 			</ul>
 			
 		</footer>
-			{/* <div className="col-md-4 d-flex align-items-center">
-				<p> Las imagenes e información de este blog fueron recopiladas de: &nbsp;
-				<a href="https://www.swapi.tech/" className="mb-3 me-2 mb-md-0 text-warning text-decoration-underline lh-1">SWAPI 
-				</a>
-				</p>
-		
-			</div> */}
+	
 		</div>
 	)
 }

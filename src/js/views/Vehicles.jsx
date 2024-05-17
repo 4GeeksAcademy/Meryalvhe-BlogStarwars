@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from '../store/appContext.js';
+import { Spinner } from "../component/Spinner.jsx";
 
 export const Vehicles = () => {
     const { store, actions } = useContext (Context);
